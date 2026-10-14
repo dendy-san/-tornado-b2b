@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корпоративные мероприятия в яхт-клубе «Торнадо» — Май 2027</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #1A365D; line-height: 1.6; background: #F8F9FA; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .btn { display: inline-block; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s; cursor: pointer; border: 2px solid transparent; text-align: center; }
+        .btn-primary { background: #E07A5F; color: white; border-color: #E07A5F; }
+        .btn-primary:hover { background: #c96a52; border-color: #c96a52; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(224, 122, 95, 0.3); }
+        .btn-secondary { background: transparent; color: #1A365D; border-color: #1A365D; }
+        .btn-secondary:hover { background: #1A365D; color: white; }
+        .btn-outline-light { background: transparent; color: white; border-color: white; }
+        .btn-outline-light:hover { background: white; color: #1A365D; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2); }
+        
+        .hero { background: linear-gradient(135deg, #1A365D 0%, #2d5a8f 100%); color: white; padding: 100px 0; }
+        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero h1 { font-size: 48px; margin-bottom: 24px; line-height: 1.2; }
+        .hero .subtitle { font-size: 20px; margin-bottom: 40px; opacity: 0.95; font-weight: 300; }
+        .hero-buttons { display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+        .hero-phone-note { font-size: 15px; opacity: 0.85; margin-bottom: 30px; }
+        .hero-phone-note a { color: white; text-decoration: underline; font-weight: 600; }
+        .hero-phone-note a:hover { text-decoration: none; }
+        .hero-triggers { display: flex; gap: 30px; font-size: 14px; opacity: 0.9; flex-wrap: wrap; }
+        .hero-triggers span { display: flex; align-items: center; gap: 8px; }
+        .hero-image { width: 100%; aspect-ratio: 16/9; background: #E9E4D3; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+        .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        
+        section { padding: 80px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 42px; margin-bottom: 20px; color: #1A365D; }
+        .section-header p { font-size: 18px; color: #666; max-width: 700px; margin: 0 auto; }
+        
+        .why-may { background: white; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feature-card { background: #F8F9FA; padding: 40px 30px; border-radius: 12px; border-left: 4px solid #E07A5F; transition: transform 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+        .feature-card h3 { font-size: 22px; margin-bottom: 15px; color: #1A365D; }
+        .feature-card p { color: #666; font-size: 16px; }
+        
+        .infrastructure { background: #F8F9FA; }
+        .infra-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .infra-block { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .infra-block h3 { font-size: 28px; margin-bottom: 25px; color: #1A365D; }
+        .block-image { width: 100%; aspect-ratio: 4/3; background: #E9E4D3; border-radius: 8px; overflow: hidden; margin-bottom: 25px; }
+        .block-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .infra-block ul { list-style: none; padding: 0; }
+        .infra-block li { padding: 12px 0; border-bottom: 1px solid #E9E4D3; font-size: 16px; }
+        .infra-block li:last-child { border-bottom: none; }
+        .infra-block li:before { content: "✓ "; color: #E07A5F; font-weight: bold; margin-right: 8px; }
+        
+        .yacht-club { background: white; }
+        .yacht-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .yacht-text h3 { font-size: 36px; margin-bottom: 20px; color: #1A365D; }
+        .yacht-text > p { font-size: 18px; margin-bottom: 30px; color: #666; }
+        .yacht-options { list-style: none; padding: 0; }
+        .yacht-options li { padding: 12px 0; font-size: 16px; }
+        .yacht-options li:before { content: "⛵ "; color: #E07A5F; }
+        
+        .activities { background: #F8F9FA; }
+        .activities-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; }
+        .activity-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .activity-card h3 { font-size: 24px; margin-bottom: 20px; color: #1A365D; }
+        .activity-card ul { list-style: none; padding: 0; }
+        .activity-card li { padding: 8px 0; font-size: 15px; color: #333; }
+        .activity-card li:before { content: "▸ "; color: #E07A5F; font-weight: bold; margin-right: 8px; }
+        
+        .packages { background: white; }
+        .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .package-card { background: #F8F9FA; padding: 40px; border-radius: 12px; position: relative; transition: transform 0.3s; }
+        .package-card:hover { transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+        .package-card.featured { border: 2px solid #E07A5F; background: white; }
+        .package-badge { position: absolute; top: -12px; right: 30px; background: #E07A5F; color: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .package-card h3 { font-size: 24px; margin-bottom: 10px; color: #1A365D; }
+        .package-duration { color: #E07A5F; font-weight: 600; margin-bottom: 20px; font-size: 14px; }
+        .package-card ul { list-style: none; padding: 0; margin-bottom: 30px; }
+        .package-card li { padding: 10px 0; border-bottom: 1px solid #E9E4D3; font-size: 15px; }
+        .package-card li:last-child { border-bottom: none; }
+        .package-price { font-size: 32px; font-weight: 800; color: #1A365D; margin-bottom: 10px; }
+        .package-price span { font-size: 16px; font-weight: 400; color: #666; }
+        .package-note { font-size: 13px; color: #999; margin-bottom: 20px; }
+        
+        .september { background: linear-gradient(135deg, #E07A5F 0%, #c96a52 100%); color: white; text-align: center; }
+        .september h2 { color: white; font-size: 42px; margin-bottom: 20px; }
+        .september p { font-size: 20px; max-width: 800px; margin: 0 auto 40px; opacity: 0.95; }
+        .september .btn { background: white; color: #E07A5F; border-color: white; }
+        .september .btn:hover { background: #F8F9FA; }
+        
+        .social-proof { background: #F8F9FA; }
+        .logos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 60px; }
+        .logo-placeholder { height: 80px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px; border: 2px dashed #ddd; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .testimonial-card { background: white; padding: 30px; border-radius: 12px; border-left: 4px solid #E07A5F; }
+        .testimonial-card p { font-style: italic; margin-bottom: 20px; font-size: 16px; color: #333; }
+        .testimonial-author { font-weight: 600; color: #1A365D; }
+        .testimonial-position { font-size: 14px; color: #666; }
+        
+        .process { background: white; }
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; }
+        .step { background: #F8F9FA; padding: 30px; border-radius: 12px; text-align: center; }
+        .step-number { width: 50px; height: 50px; background: #E07A5F; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; margin: 0 auto 20px; }
+        .step h4 { font-size: 18px; margin-bottom: 10px; color: #1A365D; }
+        .step p { font-size: 14px; color: #666; }
+        
+        .faq { background: #F8F9FA; }
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: white; padding: 30px; border-radius: 12px; margin-bottom: 20px; }
+        .faq-item h4 { font-size: 18px; margin-bottom: 15px; color: #1A365D; }
+        .faq-item p { color: #666; font-size: 16px; }
+        
+        .contact-form { background: linear-gradient(135deg, #1A365D 0%, #2d5a8f 100%); color: white; }
+        .contact-form h2 { color: white; text-align: center; font-size: 42px; margin-bottom: 60px; }
+        .form-container { max-width: 700px; margin: 0 auto; background: white; padding: 60px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+        .form-group { margin-bottom: 24px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #1A365D; }
+        .form-group input, .form-group select { width: 100%; padding: 14px; border: 2px solid #E9E4D3; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 16px; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: #E07A5F; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-container .btn { width: 100%; padding: 18px; font-size: 18px; }
+        .form-note { text-align: center; margin-top: 20px; font-size: 13px; color: #999; }
+        
+        .contacts { background: white; text-align: center; }
+        .contacts h2 { font-size: 42px; margin-bottom: 40px; }
+        .contact-info { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
+        .contact-item { text-align: center; }
+        .contact-item h4 { font-size: 18px; margin-bottom: 10px; color: #E07A5F; }
+        .contact-item p { font-size: 16px; color: #1A365D; }
+        .contact-item a { color: #1A365D; text-decoration: none; }
+        .contact-item a:hover { color: #E07A5F; }
+        
+        @media (max-width: 768px) {
+            .hero-content, .yacht-content, .infra-tabs, .activities-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 32px; }
+            .section-header h2 { font-size: 32px; }
+            .hero-buttons { flex-direction: column; }
+            .form-row { grid-template-columns: 1fr; }
+            .form-container { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <h1>Корпоративные выезды и стратегические сессии в яхт-клубе «Торнадо» на Черном море</h1>
+                    <p class="subtitle">Май 2027: вывезите команду к морю, пока другие ждут лета. Конференц-инфраструктура, прогулки на яхтах и полное документальное сопровождение.</p>
+                    <div class="hero-buttons">
+                        <a href="#form" class="btn btn-primary">Получить коммерческое предложение на май</a>
+                        <a href="#packages" class="btn btn-outline-light">Посмотреть пакеты и условия</a>
+                    </div>
+                    <p class="hero-phone-note">
+                        Свободные даты на май уточняйте по телефону: 
+                        <a href="tel:+78005553535">+7 (800) 555-35-35</a>
+                    </p>
+                    <div class="hero-triggers">
+                        <span>✓ Полный пакет закрывающих документов</span>
+                        <span>✓ От 8 900 ₽/чел за 2 дня</span>
+                        <span>✓ Собственный яхт-клуб</span>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero.jpg" alt="Парусная регата в открытом море">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОЧЕМУ МАЙ -->
+    <section class="why-may">
+        <div class="container">
+            <div class="section-header">
+                <h2>Почему именно май?</h2>
+                <p>Май — лучшее время для корпоративного выезда</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card"><h3>Идеальный климат для активностей</h3><p>+22...+25°C. Комфортно для outdoor-тимбилдингов, в отличие от изнуряющего июля</p></div>
+                <div class="feature-card"><h3>Максимальная концентрация команды</h3><p>Нет туристического шума и суеты высокого сезона</p></div>
+                <div class="feature-card"><h3>Оптимизация бюджета</h3><p>Стоимость размещения и кейтеринга на 30-35% ниже пиковых летних тарифов</p></div>
+                <div class="feature-card"><h3>Майские праздники как бонус</h3><p>Возможность объединить рабочий выезд с официальными выходными днями</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ИНФРАСТРУКТУРА -->
+    <section class="infrastructure">
+        <div class="container">
+            <div class="section-header">
+                <h2>Всё для продуктивной работы и качественного отдыха</h2>
+            </div>
+            <div class="infra-tabs">
+                <div class="infra-block">
+                    <h3>Конференц-зона</h3>
+                    <div class="block-image">
+                        <img src="images/conference.jpg" alt="Конференц-зал">
+                    </div>
+                    <ul>
+                        <li>Вместимость: от 20 до 150 человек</li>
+                        <li>Площадь: 200 м² с естественным светом</li>
+                        <li>Техническое оснащение: 4K-проектор, экран, флипчарты, маркерные доски</li>
+                        <li>Профессиональный звук и высокоскоростной Wi-Fi</li>
+                        <li>Варианты рассадки: театр, класс, U-образная, банкет</li>
+                    </ul>
+                </div>
+                <div class="infra-block">
+                    <h3>Размещение и питание</h3>
+                    <div class="block-image">
+                        <img src="images/room.jpg" alt="Номер с видом на море">
+                    </div>
+                    <ul>
+                        <li>Номера различных категорий: стандарт, полулюкс, люкс</li>
+                        <li>Возможность полного выкупа комплекса</li>
+                        <li>Ресторан с панорамным видом на море</li>
+                        <li>Бизнес-ланчи, кофе-брейки, банкетное меню</li>
+                        <li>Индивидуальное меню с учетом диетических требований</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЯХТ-КЛУБ -->
+    <section class="yacht-club">
+        <div class="container">
+            <div class="yacht-content">
+                <div class="block-image" style="margin-bottom: 0;">
+                    <img src="images/yacht.jpg" alt="Яхт-клуб Торнадо">
+                </div>
+                <div class="yacht-text">
+                    <h3>Прогулки на яхтах для сплочения команды</h3>
+                    <p>Никаких искусственных тренингов — только настоящее море, свежий воздух и живое общение</p>
+                    <ul class="yacht-options">
+                        <li>Аренда яхт для корпоративных прогулок (вместимость от 6 до 12 человек на борт)</li>
+                        <li>Вечерние круизы на закате для неформального общения</li>
+                        <li>Индивидуальные морские прогулки для топ-менеджмента</li>
+                        <li>Фотосопровождение мероприятий на воде</li>
+                    </ul>
+                    <a href="#form" class="btn btn-primary" style="margin-top: 30px;">Включить яхт-программу в ваше КП</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- АКТИВНОСТИ -->
+    <section class="activities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Активности для команды</h2>
+                <p>Живые соревнования вместо скучных тренингов — настоящий тимбилдинг в духе моря</p>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="block-image">
+                        <img src="images/tugwar.jpg" alt="Соревнования у бассейна">
+                    </div>
+                    <h3>Соревнования у бассейна</h3>
+                    <ul>
+                        <li>Эстафеты и водные игры на сплочение</li>
+                        <li>Перетягивание каната, командные челленджи</li>
+                        <li>Профессиональный ведущий и судейство</li>
+                        <li>Призы и награждение</li>
+                        <li>Работает в любую погоду (крытая зона бассейна)</li>
+                    </ul>
+                </div>
+                <div class="activity-card">
+                    <div class="block-image">
+                        <img src="images/sup.jpg" alt="Регата на сап-досках">
+                    </div>
+                    <h3>Регата на сап-досках</h3>
+                    <ul>
+                        <li>Командные заплывы на скорость и координацию</li>
+                        <li>Инструктаж и обеспечение безопасности</li>
+                        <li>Подходит для любого уровня подготовки</li>
+                        <li>Фото- и видеосопровождение</li>
+                        <li>Награждение победителей</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="#form" class="btn btn-primary">Включить активности в программу выезда</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПАКЕТЫ -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <div class="section-header"><h2>Корпоративные пакеты на май 2027</h2></div>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>«Стратегия у моря»</h3>
+                    <div class="package-duration">2 дня / 1 ночь</div>
+                    <ul>
+                        <li>Конференц-блок (полный день)</li>
+                        <li>2 кофе-брейка</li>
+                        <li>Обед и ужин в ресторане</li>
+                        <li>Размещение в номерах стандарт</li>
+                        <li>Вечерняя прогулка на яхте</li>
+                    </ul>
+                    <div class="package-price">От 8 900 ₽ <span>/ чел</span></div>
+                    <div class="package-note">Для групп от 30 человек при бронировании до 1 марта 2027</div>
+                    <a href="#form" class="btn btn-secondary">Запросить КП</a>
+                </div>
+                <div class="package-card featured">
+                    <div class="package-badge">Популярный выбор</div>
+                    <h3>«Командный импульс»</h3>
+                    <div class="package-duration">3 дня / 2 ночи</div>
+                    <ul>
+                        <li>Расширенный конференц-блок (2 дня)</li>
+                        <li>Регата на сап-досках + соревнования у бассейна</li>
+                        <li>Полное трехразовое питание</li>
+                        <li>Размещение в номерах полулюкс</li>
+                        <li>2 яхт-прогулки для команд</li>
+                        <li>Фотосопровождение</li>
+                    </ul>
+                    <div class="package-price">От 14 500 ₽ <span>/ чел</span></div>
+                    <div class="package-note">Для групп от 30 человек при бронировании до 1 марта 2027</div>
+                    <a href="#form" class="btn btn-primary">Запросить КП</a>
+                </div>
+                <div class="package-card">
+                    <h3>«Премиум-выход»</h3>
+                    <div class="package-duration">1 день</div>
+                    <ul>
+                        <li>Аренда яхты для топ-менеджмента (до 10 чел.)</li>
+                        <li>Индивидуальный морской маршрут</li>
+                        <li>Трансфер от отеля до причала</li>
+                        <li>Фотосопровождение</li>
+                        <li>Ужин в ресторане комплекса после прогулки</li>
+                    </ul>
+                    <div class="package-price">По запросу</div>
+                    <div class="package-note">Индивидуальный расчет под ваши задачи</div>
+                    <a href="#form" class="btn btn-secondary">Обсудить детали</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕНТЯБРЬ -->
+    <section class="september">
+        <div class="container">
+            <h2>Не успели в мае? Забронируйте «бархатный сезон»</h2>
+            <p>Сентябрь в «Торнадо» — это прогретое за лето море (+24°C), мягкий климат и специальные цены межсезонья. Идеально для подведения итогов года и планирования.</p>
+            <a href="tel:+78005553535" class="btn">Уточнить наличие дат на сентябрь по телефону</a>
+        </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-header"><h2>Нам доверяют свои команды</h2></div>
+            <div class="logos-grid">
+                <div class="logo-placeholder">Логотип компании 1</div>
+                <div class="logo-placeholder">Логотип компании 2</div>
+                <div class="logo-placeholder">Логотип компании 3</div>
+                <div class="logo-placeholder">Логотип компании 4</div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>«Провели стратегическую сессию в мае прошлого года. Атмосфера яхт-клуба помогла команде полностью отключиться от рутины и сосредоточиться на важных решениях. Вечерняя прогулка на яхте стала лучшим тимбилдингом за все годы»</p>
+                    <div class="testimonial-author">Анна Петрова</div>
+                    <div class="testimonial-position">HR-директор, IT-компания</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>«Отличная инфраструктура для конференций и потрясающая локация. Команда вернулась с новыми идеями и мотивацией. Отдельное спасибо за оперативное предоставление всех закрывающих документов»</p>
+                    <div class="testimonial-author">Михаил Соколов</div>
+                    <div class="testimonial-position">Руководитель отдела развития, производственная компания</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>«Май в Торнадо — это идеальное сочетание работы и отдыха. Конференц-зал оборудован всем необходимым, а прогулка на яхте вечером сплотила команду лучше любого тренинга»</p>
+                    <div class="testimonial-author">Елена Васильева</div>
+                    <div class="testimonial-position">Офис-менеджер, консалтинговая компания</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРОЦЕСС -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header"><h2>Как мы организуем ваш выезд</h2></div>
+            <div class="process-steps">
+                <div class="step"><div class="step-number">1</div><h4>Заявка и брифинг</h4><p>Обсуждаем ваши задачи и ожидания</p></div>
+                <div class="step"><div class="step-number">2</div><h4>Подбор дат и КП</h4><p>Готовим индивидуальное предложение</p></div>
+                <div class="step"><div class="step-number">3</div><h4>Договор и предоплата</h4><p>Подписание документов, предоплата 50%</p></div>
+                <div class="step"><div class="step-number">4</div><h4>Детализация программы</h4><p>Утверждаем меню и тайминг</p></div>
+                <div class="step"><div class="step-number">5</div><h4>Проведение мероприятия</h4><p>Встреча гостей, трансфер, программа</p></div>
+                <div class="step"><div class="step-number">6</div><h4>Закрывающие документы</h4><p>Полный пакет документов для бухгалтерии</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header"><h2>Часто задаваемые вопросы</h2></div>
+            <div class="faq-list">
+                <div class="faq-item"><h4>Какое расстояние от аэропорта/вокзала? Есть ли трансфер?</h4><p>Расстояние от аэропорта — 45 км, от железнодорожного вокзала — 12 км. Организуем трансфер для групп от 20 человек (включен в пакеты «Командный импульс» и «Премиум-выход», для пакета «Стратегия у моря» — по запросу).</p></div>
+                <div class="faq-item"><h4>Можно ли приехать со своим алкоголем/кейтерингом?</h4><p>Собственный кейтеринг не допускается — мы работаем только с нашим рестораном для обеспечения качества и безопасности. Алкогольные напитки можно привезти с собой (пробковый сбор не взимается).</p></div>
+                <div class="faq-item"><h4>Что если погода в мае будет плохой? Есть ли крытые площадки для активностей?</h4><p>Да, у нас есть крытая терраса площадью 150 м² с панорамным видом на море, подходящая для проведения активностей в любую погоду. Также доступен конференц-зал для indoor-тимбилдингов. Соревнования у бассейна проводятся в крытой зоне.</p></div>
+                <div class="faq-item"><h4>Нужен ли опыт для участия в регате на сап-досках?</h4><p>Нет, опыт не требуется. Перед стартом проводится инструктаж, все участники получают спасательные жилеты. Инструкторы сопровождают группу на протяжении всего заплыва.</p></div>
+                <div class="faq-item"><h4>Работаете ли вы с налогом на добавленную стоимость? Какие документы предоставляете?</h4><p>Да, мы работаем с налогом на добавленную стоимость. Предоставляем полный пакет закрывающих документов: договор, акт выполненных работ, счет-фактура, товарный чек. Все документы соответствуют требованиям бухгалтерского учета.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФОРМА -->
+    <section class="contact-form" id="form">
+        <div class="container">
+            <h2>Обсудим ваш корпоративный выезд в мае?</h2>
+            <div class="form-container">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group"><label for="name">Ваше имя *</label><input type="text" id="name" name="name" required></div>
+                        <div class="form-group"><label for="company">Название компании *</label><input type="text" id="company" name="company" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="phone">Телефон *</label><input type="tel" id="phone" name="phone" required></div>
+                        <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="dates">Планируемые даты</label><input type="text" id="dates" name="dates" placeholder="Например: 15-17 мая 2027"></div>
+                        <div class="form-group"><label for="participants">Количество участников</label><input type="number" id="participants" name="participants" placeholder="Например: 35"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Тип мероприятия</label>
+                        <select id="type" name="type">
+                            <option value="">Выберите тип</option>
+                            <option value="strategy">Стратегическая сессия</option>
+                            <option value="team">Тимбилдинг</option>
+                            <option value="conference">Конференция</option>
+                            <option value="mixed">Комбинированное мероприятие</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить запрос и получить КП в течение 2 часов</button>
+                    <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2>Контакты отдела по работе с корпоративными клиентами</h2>
+            <div class="contact-info">
+                <div class="contact-item"><h4>Телефон</h4><p><a href="tel:+78005553535">+7 (800) 555-35-35</a></p></div>
+                <div class="contact-item"><h4>Email</h4><p><a href="mailto:corporate@tornado-yacht.ru">corporate@tornado-yacht.ru</a></p></div>
+                <div class="contact-item"><h4>WhatsApp</h4><p><a href="https://wa.me/79001234567">+7 (900) 123-45-67</a></p></div>
+                <div class="contact-item"><h4>Время работы</h4><p>Пн-Пт: 9:00 - 18:00</p></div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
